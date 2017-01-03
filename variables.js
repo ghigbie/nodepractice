@@ -17,5 +17,9 @@ console.log("///////////////");
 console.log(`${firstName} ${lastName}`);
 console.log(`The IT Directors name is: ${firstName}`);
 
+//ES5
 var fullName = firstName + " " + lastName;
+console.log(fullName);
+//ES6
+var fullName = `${firstName} ${lastName}`;
 console.log(fullName);
