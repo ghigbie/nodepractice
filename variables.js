@@ -12,3 +12,10 @@ var lastName = "Davis";
 
 console.log(firstName + " " + lastName); //ES5 way of concatenated
 console.log(firstName, lastName);
+console.log("///////////////");
+//ES6 way of doing things
+console.log(`${firstName} ${lastName}`);
+console.log(`The IT Directors name is: ${firstName}`);
+
+var fullName = firstName + " " + lastName;
+console.log(fullName);
