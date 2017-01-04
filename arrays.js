@@ -58,3 +58,5 @@ console.log(reversedArray);
 let statesArray = ["Missour", "Arkansas", "Arizona", "Texas"];
 let sortedStatesArray = statesArray.sort();
 console.log(sortedStatesArray);
+
+//custom sort values can be added as a parameter
