@@ -60,3 +60,9 @@ let sortedStatesArray = statesArray.sort();
 console.log(sortedStatesArray);
 
 //custom sort values can be added as a parameter
+let numericArray = [233, 3, 83, 2399, 23, 5, 8];
+let sortedNumericArrayES6 = numericArray.sort((a, b) => a -b);
+
+let sortedNumericArrayES5 = numericArray.sort(function(a, b){
+  return a - b;
+})
