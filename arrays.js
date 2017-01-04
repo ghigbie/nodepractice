@@ -55,9 +55,14 @@ let reversedArray = concatArray2.reverse();
 console.log(reversedArray);
 
 //SORT
-let statesArray = ["Missour", "Arkansas", "Arizona", "Texas"];
+let statesArray = ["Missour", "Arkansas", "Arizona", "Texas", "Mississippi", "New York"];
 let sortedStatesArray = statesArray.sort();
 console.log(sortedStatesArray);
+
+//custom sort values can be added as a parameter
+let numericArrayNumbers = [233, 3, 83, 2399, 23, 5, 8];
+let sortedNumberArray = numericArrayNumbers.sort();
+console.log(sortedNumberArray);
 
 //custom sort values can be added as a parameter
 let numericArray = [233, 3, 83, 2399, 23, 5, 8];
@@ -66,3 +71,15 @@ let sortedNumericArrayES6 = numericArray.sort((a, b) => a -b);
 let sortedNumericArrayES5 = numericArray.sort(function(a, b){
   return a - b;
 })
+
+console.log("sortedNumericArrayES5 " + sortedNumericArrayES5);
+
+//SLICE - slice allows you to pull out a part of an array. It takes two values, the
+//start index and the end index. The method will return all values from start index
+//up to, but NOT INCLUDING the end index
+
+let slicedStates = sortedStatesArray.slice(2,5);
+console.log(slicedStates);
+
+slicedStates = sortedStatesArray.slice(2); //this will take you up to the end of the array
+console.log(slicedStates);
