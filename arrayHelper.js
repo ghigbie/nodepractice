@@ -67,3 +67,40 @@ console.log(years);
 
 let fourWheelDrives = vehicles.map(y => y.is4WD);
 console.log(fourWheelDrives);
+
+//more helper methods
+
+//FILTER - it allows you to filter out only certain elements in an array. - gets all of the elements
+//that match the criteria
+
+let filteredVehicles = vehicles.filter(vehicle => vehicle.make === 'Dodge');
+console.log("ES6 filter methods");
+console.log(filteredVehicles);
+
+//ES5
+
+let filteredVehicles2 = vehicles.filter(function(vehicle){
+  return vehicle.make === 'Dodge';
+});
+console.log("ES5 filter method");
+console.log(filteredVehicles2);
+
+//FIND HELPER method - gets the first element that matches the criteria and stops
+
+//ES5
+let vehicle = vehicles.find(function(vehicle){
+  return vehicle.make === 'Nissan'
+})
+console.log(vehicle);
+
+
+vehicle = vehicles.find(function(vehicle){
+  return vehicle.make === 'Dodge'
+})
+console.log(vehicle);
+
+
+//ES6
+
+let vehicle2 = vehicles.find(vehicle => vehicle.make === 'Nissan');
+console.log(vehicle2);
