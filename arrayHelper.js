@@ -125,8 +125,49 @@ console.log(driver);
 let areAll4WD = vehicles.every(function(vehicle){
   return vehicle.is4WD === true;
 });
-
+console.log("ES5 way of doign things =========");
 console.log(areAll4WD); //not all of the vehicles are 4WD, that means that they do not all mee the condition
 
-let areAll4WD2 = vehicles.every(vehicle => vehicle.is4WD == true);
+//ES6
+console.log("ES6 way of doign things =======");
+let areAll4WD2 = vehicles.every(vehicle => vehicle.is4WD === true);
 console.log(areAll4WD2);
+
+//SOME
+//- is basically the same thing as every, but it looks to see if some meet the condition
+
+let areSome4WD = vehicles.some(function(vehicle){
+  return vehicle.is4WD === true;
+});
+console.log(areSome4WD); //one vehicle is 4WD
+
+//ES6 fat arrow
+let areSome4WD2 = vehicles.some(vehicle => vehicle.is4WD === true);
+console.log("ES6 fat arroww ===========");
+console.log(areSome4WD2);
+
+//REDUCE
+// - used ofter, it lets you iterate through array and keep a running some
+
+let grades2 = [98, 6, 89, 34, 98, 65];
+let sum2 = 0;
+
+for(let x = 0; x < grades2.length; x++){
+  sum2 +=grades2[x];
+}
+console.log(`sum = ${sum2}`);
+console.log(`Out average is ${(sum2/grades2.length).toFixed(1)}`);
+
+let total = grades2.reduce(function(sum2, grade){
+  return sum2 + grade;
+}, 0)
+console.log(`total = ${total}`);
+console.log(`Our average is ${(total / grades2.length).toFixed(1)}`);
+
+//ES6
+
+let total2 = grades2.reduce((sum2, grade) => {
+  return sum2 + grade;
+}, 0);
+console.log(`total = ${total2}`);
+console.log(`Our average is ${(total2 / grades2.length).toFixed(1)}`);
