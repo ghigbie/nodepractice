@@ -51,10 +51,15 @@ let addOneMap2 = array.map(value => value + 1);
 console.log(addOneMap2);
 
 let vehicles = [
-  {make: 'Dodge', model: 'Ram 1500', year: '2011', is4WD: true},
-  {make: 'Dodge', model: 'ChargerR/T', year: '2015', is4WD: false},
-  {make: 'Nissan', model: 'Rogue', year: '2016', is4WD: false}
+  {id: 1, make: 'Dodge', model: 'Ram 1500', year: '2011', is4WD: true},
+  {id: 2, make: 'Dodge', model: 'ChargerR/T', year: '2015', is4WD: false},
+  {id: 3, make: 'Nissan', model: 'Rogue', year: '2016', is4WD: false}
 ];
+
+let truckDriver = {
+  vehiclerId: 1,
+  name: "Jack"
+}
 //map lets us take an array of objects and take one Property out of that to create a new array
 let models = vehicles.map(vehicle => vehicle.model);
 console.log(models);
@@ -85,7 +90,8 @@ let filteredVehicles2 = vehicles.filter(function(vehicle){
 console.log("ES5 filter method");
 console.log(filteredVehicles2);
 
-//FIND HELPER method - gets the first element that matches the criteria and stops
+//FIND HELPER method
+//- gets the first element that matches the criteria and stops
 
 //ES5
 let vehicle = vehicles.find(function(vehicle){
@@ -99,8 +105,28 @@ vehicle = vehicles.find(function(vehicle){
 })
 console.log(vehicle);
 
-
-//ES6
-
+//ES6 fat arrow methods
 let vehicle2 = vehicles.find(vehicle => vehicle.make === 'Nissan');
 console.log(vehicle2);
+
+function driverForVehicle(vehicles, driver){
+  return vehicles.find(function(vehicle){
+    return vehicle.id === driver.vehicleId;
+  });
+}
+
+let driver = driverForVehicle(vehicles, truckDriver);
+console.log("drive variable called");
+console.log(driver);
+
+//EVERY
+// - can take a look at array and see that every element meets some condition
+
+let areAll4WD = vehicles.every(function(vehicle){
+  return vehicle.is4WD === true;
+});
+
+console.log(areAll4WD); //not all of the vehicles are 4WD, that means that they do not all mee the condition
+
+let areAll4WD2 = vehicles.every(vehicle => vehicle.is4WD == true);
+console.log(areAll4WD2);
