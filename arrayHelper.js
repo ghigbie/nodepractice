@@ -45,3 +45,25 @@ let addOneMap = array2.map(function(value){
 });
 
 console.log(addOneMap);
+
+//ES6 way of doing things using the fat arrow functions
+let addOneMap2 = array.map(value => value + 1);
+console.log(addOneMap2);
+
+let vehicles = [
+  {make: 'Dodge', model: 'Ram 1500', year: '2011', is4WD: true},
+  {make: 'Dodge', model: 'ChargerR/T', year: '2015', is4WD: false},
+  {make: 'Nissan', model: 'Rogue', year: '2016', is4WD: false}
+];
+//map lets us take an array of objects and take one Property out of that to create a new array
+let models = vehicles.map(vehicle => vehicle.model);
+console.log(models);
+
+let makes = vehicles.map(vehicle => vehicle.make);
+console.log(makes);
+
+let years = vehicles.map(x => x.year);
+console.log(years);
+
+let fourWheelDrives = vehicles.map(y => y.is4WD);
+console.log(fourWheelDrives);
