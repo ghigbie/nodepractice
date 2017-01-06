@@ -13,3 +13,13 @@ hotRod = {
 }
 
 hotRod.soundOff();
+
+
+let soundFunction = hotRod.soundOff; //this looses its context here
+soundFunction();
+
+//We can 'bind' 'this' to the object hotRod.
+//This will give soundFunction a 'this' context
+
+let boundSoundFunction = soundFunction.bind(hotRod);
+boundSoundFunction();
