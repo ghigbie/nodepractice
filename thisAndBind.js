@@ -40,3 +40,18 @@ function logName(){
 console.log(logName());
 console.log(logName.bind(person1)()); //now there is a context of Joe
 console.log(logName.bind(person2)()); //there is a contxt of Jane
+
+
+let number = {
+  x: 24,
+  y: 22
+};
+
+let count = function(){
+  console.log(this.x + this.y); //no this context here
+}
+count();
+
+let boundCount = count.bind(number);
+
+boundCount();
