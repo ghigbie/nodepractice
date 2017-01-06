@@ -1,0 +1,31 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arrayHelper.js",
+  "dependencies": {
+    "babel-cli": "^6.18.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "babel-node ./requireAndImport.js"
+  },
+
+  "babel": {
+    "presets": [
+      "es2015-node6"
+    ]
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghigbie/nodepractice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghigbie/nodepractice/issues"
+  },
+  "homepage": "https://github.com/ghigbie/nodepractice#readme"
+}
