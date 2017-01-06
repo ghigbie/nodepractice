@@ -34,3 +34,5 @@ let person1 = {
 
  hello.call(person1, "What\'s up?");
  hello.call(person2, "Yo");
+
+ //call binds to the first object that you pass in
