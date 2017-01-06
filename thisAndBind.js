@@ -23,3 +23,20 @@ soundFunction();
 
 let boundSoundFunction = soundFunction.bind(hotRod);
 boundSoundFunction();
+
+
+let person1 = {
+  name: 'Joe'
+};
+
+let person2 = {
+  name: 'Jane'
+};
+
+function logName(){
+  return this.name;  //this has not context, it's not part of an object
+}
+
+console.log(logName());
+console.log(logName.bind(person1)()); //now there is a context of Joe
+console.log(logName.bind(person2)()); //there is a contxt of Jane
